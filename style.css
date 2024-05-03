@@ -110,7 +110,7 @@ nav ul li a {
 nav ul li a:hover {
   transition: 0.3s;
   color: #fff;
-  box-shadow: 0 0 20px 20px #ff00006e;
+  box-shadow: 0 0 20px 20px #6d3c036e;
 }
 
 .togglebtn {
@@ -286,7 +286,7 @@ nav ul li a:hover {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 20px;
-  background-color: rgba(3, 169, 244, 0.3);
+  background-color: rgb(6 13 37);
 }
 
 .game-content a,
