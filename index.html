@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8">
     <title>Fnaf 1 | All version of Fnaf</title>
-    <meta name="description" content="Play Fnaf 1 unblocked">
+    <meta name="description" content="Play Fnaf 1 unblocked & hundreds of unblocked games. 10+ available!. fnaf unblocked so good. Click here boys !">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preload" href="./style.css" as="style">
@@ -152,6 +152,51 @@
     0% { background-position: 0 0; }
     100% { background-position: 0 100%; }
   }
+
+  .footer-link {
+    color: #b8b8b8;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 2px 5px;
+  }
+
+  .footer-link:hover {
+    color: #ff7070;
+  }
+
+  .footer-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff7070;
+    transition: width 0.3s ease;
+  }
+
+  .footer-link:hover::after {
+    width: 100%;
+  }
+
+  .ft-copyright {
+    position: relative;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 70, 70, 0.1);
+    animation: glowPulse 2s infinite;
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(255, 70, 70, 0.1);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(255, 70, 70, 0.2);
+    }
+  }
 </style>
   </head>
   <body>
@@ -236,6 +281,7 @@
                   <img src="https://slope-game.github.io/img/fnaf4.png" width="100" height="100" alt="Fnaf 4">
                 </a>
               </div>
+              
               </div>
             </div>
             <section class="box-games box-categories">
@@ -508,6 +554,8 @@
                   <p style="text-align:center;color:#fff">
                     <strong>Copyright © 2024 Fnaf 1. All Rights Reserved</strong>
                     <br>
+                    <a href="./termsofuse.html" class="footer-link">Terms of Use</a> | 
+                    <a href="./privacypolicy.html" class="footer-link">Privacy Policy</a>
                   </p>
                 </span>
               </div>
