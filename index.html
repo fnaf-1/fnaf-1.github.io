@@ -23,6 +23,135 @@
     color: rgb(148, 100, 99);
     font-weight: bold;
   }
+
+  .game-desc-left {
+    background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #333;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .box-content {
+    color: #b8b8b8;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+  }
+
+  .box-content h1 {
+    color: #7b3210;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    font-family: "Creepster", cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    animation: textGlow 2s ease-in-out infinite;
+  }
+
+  .box-content p {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 3px solid #953b06;
+    transition: all 0.3s ease;
+  }
+
+  .box-content p:hover {
+    background: rgba(255, 70, 70, 0.1);
+    transform: translateX(5px);
+  }
+
+  .box-content strong {
+    color: #ff7070;
+    font-weight: 600;
+  }
+
+  .box-content ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+  }
+
+  .box-content ul li {
+    background: rgba(255, 70, 70, 0.1);
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 70, 70, 0.3);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .box-content ul li:hover {
+    background: rgba(255, 70, 70, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 70, 70, 0.2);
+  }
+
+  .box-content h2 {
+    color: #6a300b;
+    font-size: 1.8em;
+    margin: 30px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 70, 70, 0.3);
+  }
+
+  .box-content iframe {
+    width: 100%;
+    border-radius: 15px;
+    margin: 25px 0;
+    box-shadow: 0 0 30px rgba(255, 70, 70, 0.15);
+  }
+
+  @keyframes textGlow {
+    0%, 100% {
+      text-shadow: 
+        0 0 10px rgba(123, 50, 16, 0.8),
+        0 0 20px rgba(123, 50, 16, 0.5),
+        0 0 30px rgba(123, 50, 16, 0.3);
+      transform: scale(1);
+    }
+    50% {
+      text-shadow: 
+        0 0 20px rgba(166, 60, 21, 1),
+        0 0 30px rgba(166, 60, 21, 0.8),
+        0 0 40px rgba(166, 60, 21, 0.6),
+        0 0 50px rgba(166, 60, 21, 0.4);
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes textFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Hiệu ứng nền động */
+  .game-desc-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 50% 50%, transparent 0%, rgba(255, 70, 70, 0.05) 100%),
+      linear-gradient(45deg, transparent 48%, rgba(255, 70, 70, 0.1) 50%, transparent 52%);
+    background-size: 100% 100%, 10px 10px;
+    animation: backgroundMove 20s linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes backgroundMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+  }
 </style>
   </head>
   <body>
@@ -89,129 +218,6 @@
                 </div>
               </div>
               <div class="list-game">
-                <div class="game-item">
-                  <a href="./game/neon-biker.html" title="Neon Biker unblocked games">
-                    <h3 class="recommend-title">Neon Biker</h3>
-                    <img src="https://slope-game.github.io/neon-biker/logo.png" width="100" height="100" alt="Neon Biker">
-                  </a>
-                </div>
-                <div class="game-item">
-                  <a href="./game/agent-walker-vs-skibidi-toilets.html" title="agent walker vs skibidi toilets unblocked games">
-                    <h3 class="recommend-title">agent walker vs skibidi toilets</h3>
-                    <img src="https://slope-game.github.io/agent-walker-vs-skibidi-toilets/logo.png" width="100" height="100" alt="agent walker vs skibidi toilets">
-                  </a>
-                </div>
-                <div class="game-item">
-                  <a href="./game/bad-ice-cream.html" title="Bad Ice Cream unblocked games">
-                    <h3 class="recommend-title">Bad Ice Cream</h3>
-                    <img src="https://bitlifeonline.github.io/bad-ice-cream/logo.png" width="100" height="100" alt="Bad Ice Cream">
-                  </a>
-                </div>
-                <div class="game-item">
-                  <a href="./game/military-shooter-training.html" title="apple shooter unblocked games">
-                    <h3 class="recommend-title">apple shooter</h3>
-                    <img src="https://classroomjq.github.io/military-shooter-training/logo.png" width="100" height="100" alt="apple shooter">
-                  </a>
-                </div>
-                <div class="game-item">
-                  <a href="./game/apple-shooter-1.html" title="funny shooter 2 unblocked games">
-                    <h3 class="recommend-title">funny shooter 2</h3>
-                    <img src="https://slope-game.github.io/apple-shooter-1/logo.png" width="100" height="100" alt="funny shooter 2">
-                  </a>
-                </div>
-                <div class="game-item">
-                  <a href="./game/boxing-physics-2.html" title="Boxing Physics 2 unblocked games">
-                    <h3 class="recommend-title">Boxing Physics 2</h3>
-                    <img src="https://classroomjq.github.io/boxing-physics-2/logo.png" width="100" height="100" alt="Boxing Physics 2">
-                  </a>
-                </div>
-            
-                <div class="game-item">
-                  <a href="./game/pool-club.html" title="Ball Pool unblocked games">
-                    <h3 class="recommend-title"> Ball Pool</h3>
-                    <img src="https://classroomjq.github.io/pool-club/logo.png" width="100" height="100" alt="Ball Pool">
-                  </a>
-                </div>
-                <div class="game-item">
-                  <a href="./game/mr-bullet-2-online.html" title="mr bullet 2 online unblocked games">
-                    <h3 class="recommend-title"> mr bullet 2 online</h3>
-                    <img src="https://rebemanae.github.io/mr-bullet-2-online/logo.png" width="100" height="100" alt="mr-bullet-2-online">
-                  </a>
-                </div>
-                <div class="game-item">
-                  <a href="./game/you-vs-100-skibidi-toilets.html" title="you vs 100 skibidi toilets unblocked games">
-                    <h3 class="recommend-title">you vs 100 skibidi toilets</h3>
-                    <img src="https://unblocked-games911.github.io/you-vs-100-skibidi-toilets/logo.png" width="100" height="100" alt="you vs 100 skibidi toilets">
-                  </a>
-                </div>
-                <div class="game-item">
-                  <a href="./game/pixel-shooter.html" title="pixel shooter unblocked games">
-                    <h3 class="recommend-title">pixel shooter</h3>
-                    <img src="https://ubg77.github.io/pixel-shooter/logo.png" width="100" height="100" alt="pixel shooter">
-                  </a>
-                </div>
-                <div class="game-item">
-                  <a href="./game/miami-crime-simulator-3d.html" title="miami crime simulator 3d unblocked games">
-                    <h3 class="recommend-title">miami crime simulator 3d</h3>
-                    <img src="https://trafficjam3d.github.io/miami-crime-simulator-3d/logo.png" width="100" height="100" alt="miami crime simulator 3d">
-                  </a>
-                </div>
-              <div class="game-item">
-                <a href="./game/yohoho-io.html" title="yohoho.io unblocked games">
-                  <h3 class="recommend-title">yohoho.io</h3>
-                  <img src="https://bitlifeonline.github.io/yohoho-io/logo.png" width="100" height="100" alt="yohoho.io">
-                </a>
-              </div>
-               <div class="game-item">
-                <a href="./game/1v1-lol.html" title="1v1 lol unblocked games">
-                  <h3 class="recommend-title">1v1 lol</h3>
-                  <img src="https://webglmath.github.io/1v1-lol/logo.png" width="100" height="100" alt="1v1 lol">
-                </a>
-              </div>
-              <div class="game-item">
-                <a href="./game/highway-racer-3d.html" title="Hightway Racer 3d unblocked games">
-                  <h3 class="recommend-title">Hightway Racer 3d</h3>
-                  <img src="https://ubg77.github.io/edit/highway-racer-3d/logo.png" width="100" height="100" alt="Hightway Racer 3d">
-                </a>
-              </div>
-              <div class="game-item">
-                <a href="./game/time-shooter-3-swat.html" title="Time Shooter 3 unblocked games">
-                  <h3 class="recommend-title">Time Shooter 3</h3>
-                  <img src="https://bitlifeonline.github.io/time-shooter-3-swat/logo.png" width="100" height="100" alt="Time Shooter 3">
-                </a>
-              </div>
-              <div class="game-item">
-                <a href="./game/time-shooter-2.html" title="Time Shooter 2 unblocked games">
-                  <h3 class="recommend-title">Time Shooter 2</h3>
-                  <img src="https://bitlifeonline.github.io/time-shooter-2/logo.png" width="100" height="100" alt="Time Shooter 2">
-                </a>
-              </div>
-              <div class="game-item">
-                <a href="./game/time-shooter.html" title="Time Shooter unblocked games">
-                  <h3 class="recommend-title">Time Shooter</h3>
-                  <img src="https://bitlifeonline.github.io/time-shooter/logo.png" width="100" height="100" alt="Time Shooter">
-                </a>
-              </div>
-              <div class="game-item">
-                <a href="./game/vex-8.html" title="Vex 8 unblocked games">
-                  <h3 class="recommend-title">Vex 8</h3>
-                  <img src="https://classroomjq.github.io/vex-8/logo.png" width="100" height="100" alt="Vex 8">
-                </a>
-              </div>
-              <div class="game-item">
-                <a href="./game/bomb-it-8.html" title="Bomb It 8 unblocked games">
-                  <h3 class="recommend-title">Bomb It 8</h3>
-                  <img src="https://unblocked-games911.github.io/bomb-it-8/logo.png" width="100" height="100" alt="Bomb It 8">
-                </a>
-              </div>
-              <div class="game-item">
-                <a href="./game/retro-bowl-college.html" title="Retro Bowl College unblocked games">
-                  <h3 class="recommend-title">Retro Bowl College</h3>
-                  <img src="https://classroomjq.github.io/retro-bowl-college/logo.png" width="100" height="100" alt="Retro Bowl College">
-                </a>
-              </div>
-
-
               <div class="game-item">
                 <a href="https://fnaf-2.github.io/" target="_blank" title="Fnaf 2 unblocked games">
                   <h3 class="recommend-title">Fnaf 2 Unblocked & Hack</h3>
@@ -230,41 +236,11 @@
                   <img src="https://slope-game.github.io/img/fnaf4.png" width="100" height="100" alt="Fnaf 4">
                 </a>
               </div>
-
-
-              <div class="game-item">
-                <a href="./game/bomb-it.html" title="Bomb It unblocked games">
-                  <h3 class="recommend-title">Bomb It</h3>
-                  <img src="https://slope-game.github.io/bomb-it/logo.png" width="100" height="100" alt="Bomb It">
-                </a>
-              </div>
-              <div class="game-item">
-                <a href="./game/bomb-it-2.html" title="Bomb It 2 unblocked games">
-                  <h3 class="recommend-title">Bomb It 2</h3>
-                  <img src="https://slope-game.github.io/bomb-it-2/logo.png" width="100" height="100" alt="Bomb It 2">
-                </a>
-              </div>
-              <div class="game-item">
-                <a href="./game/bomb-it-3.html" title="Bomb It 3 unblocked games">
-                  <h3 class="recommend-title">Bomb It</h3>
-                  <img src="https://slope-game.github.io/bomb-it-3/logo.png" width="100" height="100" alt="Bomb It">
-                </a>
-              </div>
-              <div class="game-item">
-                <a href="./game/bomb-it-7.html" title="Bomb It 7 unblocked games">
-                  <h3 class="recommend-title">Bomb It 7</h3>
-                  <img src="https://bitlifeonline.github.io/bomb-it-7/logo.png" width="100" height="100" alt="Retro Bowl College">
-                </a>
-              </div>
               </div>
             </div>
             <section class="box-games box-categories">
               <h2 class="box-games-title">Popular Categories</h2>
               <div class="list-categories-home">
-                <a href="./category/fnaf.html" class="tag-card" title="fnaf">
-                  <span>Fnaf</span>
-                  <img src="./images/Fnaf.png" width="64" height="64" alt="Fnaf">
-                </a>
                 <a href="./category/stickman.html" class="tag-card" title="Stickman">
                   <span>Stickman</span>
                   <img src="./img/stickman.png" width="64" height="64" alt="Stickman">
@@ -277,14 +253,6 @@
                   <span>Drift</span>
                   <img src="./img/drift.png" width="64" height="64" alt="Drift">
                 </a>
-                <a href="./category/vex.html" class="tag-card" title="Vex">
-                  <span>Vex</span>
-                  <img src="./img/vex catelogy.png" width="64" height="64" alt="Vex">
-                </a>
-                <a href="./category/fireboy-watergirl.html" class="tag-card" title="FireBoy &amp; WaterGirl">
-                  <span>FireBoy &amp; WaterGirl</span>
-                  <img src="./img/fireboy-watergirl.png" width="64" height="64" alt="FireBoy &amp; WaterGirl">
-                </a>
                 <a href="./category/Bombit.html" class="tag-card" title="Bomb It">
                   <span>Bomb It</span>
                   <img src="./images/bomb.png" width="64" height="64" alt="Bomb It">
@@ -294,21 +262,40 @@
             <div class="game-desc">
               <div class="game-desc-left">
                 <div class="box-content">
+                  <!-- Main Title -->
                   <h1>Welcome to FNaF 1 Unblocked</h1>
-                  <p>Prepare to face your worst nightmares in fnaf 1, the game that started it all. As the newly hired security guard at Freddy Fazbear's Pizza, you'll find yourself trapped in a nightmarish world of animatronic terror.</p>
-                  <p>In the FNAF 1 layout, players must strategically monitor the security cameras to prevent animatronics from entering the office.</p>
-                  <p>The FNAF 1 office is where players must keep a close eye on the security cameras to survive the night.</p>
-                  <p>In the FNAF 1 map, players navigate through various rooms of the haunted pizzeria while trying to avoid being attacked by animatronic characters.</p>
-                  <p>The FNAF 1 hallway is a crucial area where players must check for approaching animatronics.</p>
-                  <p>We've updated the system and rewritten the code so you can play FNAF 1 unblocked while at school. But if your school blocks the GitHub domain, then I'm out of luck too.</p>
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/A1C5MewnI0A" frameborder="0" allowfullscreen></iframe>
-                    <h2>Games You Might Like</h2>
-                    <li><a href="https://fnaf-1.github.io/game/rooftop-snipers.html">Rooftop Snipers 🔫 </a></li>
-                    <li><a href="https://fnaf-1.github.io/game/mr-bullet-3d.html">Mr Bullet 3D 👉</a></li>
-                    <li><a href="https://fnaf-1.github.io/game/you-vs-100-skibidi-toilets.html">You vs 100 Skibidi Toilets 💣</a></li>
-                    <li><a href="https://fnaf-1.github.io/game/1v1-lol.html">1v1.LOL ️🏹</a></li>
-                    <li><a href="https://fnaf-1.github.io/game/rebels-clash.html">Rebels Clash ⚔️</a></li>
-                  </ul>
+                  <!-- Game Description -->
+                  <div class="game-description">
+                    <p>Step into the chilling world of <strong>FNaF 1 Unblocked</strong>, where nightmares come to life. This is the game that started the legendary franchise, and now you can experience it without restrictions. As the night guard at <strong>Freddy Fazbear's Pizza</strong>, you'll face a terrifying challenge: survive the night while avoiding the deadly animatronics that lurk in the shadows. Your strategy, quick thinking, and calm nerves are the keys to survival.</p>
+                    <p>In <strong>FNaF 1 Unblocked</strong>, players must navigate the haunted pizzeria using the security cameras to track animatronic movements. The <strong>FNaF 1 layout</strong> is designed to keep you on edge, with every corner hiding potential dangers.</p>
+                    <p>The <strong>FNaF 1 office</strong> is your only refuge, but power management is critical. Monitor the doors and cameras carefully, or risk letting the animatronics catch you off guard.</p>
+                    <p>Exploring the <strong>FNaF 1 map</strong> reveals an eerie environment filled with tension. As Freddy, Chica, Bonnie, and others roam the pizzeria, you'll need to stay alert and outsmart their relentless pursuit.</p>
+                    <p>The <strong>FNaF 1 hallway</strong> is one of the most intense areas, where every shadow and sound could mean an animatronic is closing in. Vigilance and quick reactions are your only chance to survive the night.</p>
+                    <p>With this optimized version, you can now play <strong>FNaF 1 Unblocked</strong> at school or work without issues. Experience the full horror of this iconic game, even if access to gaming platforms is restricted. But beware, if your network blocks GitHub, you might need to find another way to enjoy this terrifying adventure!</p>
+                  </div>
+                  <!-- Game Trailer -->
+                  <div class="game-trailer">
+                    <iframe 
+                      width="560" 
+                      height="315" 
+                      src="https://www.youtube.com/embed/A1C5MewnI0A" 
+                      frameborder="0" 
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+                  <!-- Keywords Section -->
+                  <div class="keywords-section">
+                    <h2>Related Keywords</h2>
+                    <ul>
+                      <li>FNaF 1 Unblocked</li>
+                      <li>FNaF 1</li>
+                      <li>FNaF Unblocked</li>
+                      <li>FNaF 1 office</li>
+                      <li>fnaf 1 map</li>
+                      <li>FNaF1Unblocked</li>
+                    </ul>
+                  </div>
+                  <!-- Related Games -->
                 </div>
               </div>
             </div>
