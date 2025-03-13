@@ -28,6 +28,10 @@
                        <img alt="Fnaf 1 - Play Unblocked Games" src="../images/FNAF to.png" width="160" height="160" decoding="async" data-nimg="1" loading="lazy" style="color:transparent">
                 </a>
               </label>
+               <ul>
+                <li>
+                  <a href="../category/new.html" title="Fnaf 1 unblocked">New🔥</a>
+                </li>
              <ul>
                 <li>
                   <a href="../category/new.html" title="Fnaf 1 unblocked">New🔥</a>
@@ -69,16 +73,12 @@
                 <a title="New unblocked games" href="../category/new.html">New</a>
             </li>
             </ul>
+            <div class="search-box">
+              <input type="text" id="searchInput" placeholder="Search games...">
+              <div id="searchResults" class="search-results"></div>
+            </div>
             <div class="box-games">
               <div class="list-item">
-                <a href="../game/skateboard-racing.html" title="Skate Board Racing" class="item">
-                  <div class="image">
-                    <img src="https://bitlifeonline.github.io/skateboard-racing/logo.png" width="200" height="200" alt="Skate Board Racing">
-                  </div>
-                  <div class="content">
-                    <h3 class="heading-game">Skate Board Racing</h3>
-                  </div>
-                </a>
                 <a href="../game/johnny-revenge.html" title="Johnny Revenge" class="item">
                   <div class="image">
                     <img src="https://slope-game.github.io/johnny-revenge/logo.png" width="200" height="200" alt="Johnny Revenge">
@@ -361,30 +361,6 @@
                     <h3 class="heading-game">Go Kart Go Ultra</h3>
                   </div>
                 </a>
-                <a href="../game/subway-surfers-nyc.html" title="Subway Surfers NewYork" class="item">
-                  <div class="image">
-                    <img src="https://ubg77.github.io/updatefaqs/subway-surfers-nyc/logo.png" width="200" height="200" alt="Subway Surfers NewYork">
-                  </div>
-                  <div class="content">
-                    <h3 class="heading-game">Subway Surfers NewYork</h3>
-                  </div>
-                </a> 
-                <a href="../game/subway-surfers-bali.html" title="Subway Surfers BaLi" class="item">
-                  <div class="image">
-                    <img src="https://ubg77.github.io/updatefaqs/subway-surfers-bali/logo.png" width="200" height="200" alt="Subway Surfers BaLi">
-                  </div>
-                  <div class="content">
-                    <h3 class="heading-game">Subway Surfers BaLi</h3>
-                  </div>
-                </a>
-                <a href="../game/subway-surfers-havana.html" title="Subway Surfers Havana" class="item">
-                  <div class="image">
-                    <img src="https://ubg77.github.io/updatefaqs/subway-surfers-havana/logo.png" width="200" height="200" alt="Subway Surfers Havana">
-                  </div>
-                  <div class="content">
-                    <h3 class="heading-game">Subway Surfers Havana</h3>
-                  </div>
-                </a>  
                 <a href="../game/sports-bike-racing.html" title="Sports Bike Racing" class="item">
                   <div class="image">
                     <img src="https://trafficjam3d.github.io/sports-bike-racing/logo.png" width="200" height="200" alt="Sports Bike Racing">
@@ -424,6 +400,173 @@
       </div>
       <div id="popup"></div>
     </div>
+    <div id="popup"></div>
+  </div>
+   <!-- Thêm CSS -->
+  <style>
+    .search-box {
+        position: relative;
+        width: 300px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    #searchInput {
+        width: 100%;
+        padding: 12px 20px;
+        border-radius: 25px;
+        border: 2px solid #953b06;
+        background: rgba(26, 26, 26, 0.95);
+        color: white;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px rgba(149, 59, 6, 0.1);
+    }
+
+    #searchInput:focus {
+        outline: none;
+        border-color: #ff7070;
+        box-shadow: 0 0 15px rgba(255, 112, 112, 0.2);
+    }
+
+    #searchInput::placeholder {
+        color: #666;
+    }
+
+    .search-results {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        width: 100%;
+        background: rgba(26, 26, 26, 0.98);
+        border: 2px solid #953b06;
+        border-radius: 15px;
+        max-height: 350px;
+        overflow-y: auto;
+        z-index: 1000;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .search-results::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .search-results::-webkit-scrollbar-track {
+        background: #1a1a1a;
+        border-radius: 10px;
+    }
+
+    .search-results::-webkit-scrollbar-thumb {
+        background: #953b06;
+        border-radius: 10px;
+    }
+
+    .result-item {
+        padding: 12px 20px;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: all 0.2s ease;
+        border-bottom: 1px solid rgba(149, 59, 6, 0.2);
+    }
+
+    .result-item:last-child {
+        border-bottom: none;
+    }
+
+    .result-item img {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        margin-right: 15px;
+        object-fit: cover;
+        border: 1px solid rgba(149, 59, 6, 0.3);
+    }
+
+    .result-item .game-info {
+        flex: 1;
+    }
+
+    .result-item .game-name {
+        font-weight: 500;
+        margin-bottom: 3px;
+    }
+
+    .result-item:hover {
+        background: rgba(149, 59, 6, 0.2);
+        transform: translateX(5px);
+    }
+
+    /* Animation cho kết quả tìm kiếm */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .search-results {
+        animation: fadeIn 0.3s ease;
+    }
+
+    /* Style cho trạng thái không tìm thấy */
+    .result-item.no-results {
+        color: #666;
+        text-align: center;
+        padding: 20px;
+        font-style: italic;
+    }
+  </style>
+   <!-- Thêm JavaScript -->
+  <script src="../js/games-data.js"></script>
+  
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+     
+    searchInput.addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+      
+      if (searchTerm.length < 1) {
+        searchResults.style.display = 'none';
+        return;
+      }
+       
+      const matches = gameList.filter(game => 
+        game.name.toLowerCase().includes(searchTerm)
+      );
+       
+      if (matches.length > 0) {
+        searchResults.innerHTML = matches
+         .map(game => `
+        <div class="result-item">
+            <img src="${game.image}" alt="${game.name}">
+            <div class="game-info">
+                <div class="game-name">${game.name}</div>
+            </div>
+        </div>
+    `)
+    .join('');
+        searchResults.style.display = 'block';
+      } else {
+        searchResults.innerHTML = '<div class="result-item">No games found</div>';
+        searchResults.style.display = 'block';
+      }
+    });
+     
+    document.addEventListener('click', function(e) {
+      if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.style.display = 'none';
+      }
+    });
+  </script>
   </body>
 </html>
