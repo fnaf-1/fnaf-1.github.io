@@ -8,11 +8,65 @@
     />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Canonical tag - Báo cho Google biết trang chính thức -->
+
+    <!-- Migration & SEO Tags -->
+    <!-- Canonical tag - Báo cho Google biết trang mới là trang chính thức -->
+    <!-- Trang này vẫn được index để giữ traffic, nhưng canonical báo Google về migration -->
     <link rel="canonical" href="https://fnafofficial.com/fnaf-unblocked.html" />
+
+    <!-- Alternate link - Báo Google về trang mới -->
+    <link rel="alternate" href="https://fnafofficial.com/fnaf-unblocked.html" />
+
+    <!-- Meta robots: index, follow - Giữ trang trong index nhưng follow links để truyền link juice -->
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+
+    <!-- Preconnect để tăng tốc độ load trang mới -->
+    <link rel="preconnect" href="https://fnafofficial.com" />
+    <link rel="dns-prefetch" href="https://fnafofficial.com" />
+
     <link rel="preload" href="./style.css" as="style" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="/images/Fnaf.png" />
+
+    <!-- Structured Data để hỗ trợ SEO migration -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "FNAF Official",
+        "url": "https://fnafofficial.com/fnaf-unblocked.html",
+        "description": "Play FNAF 1 Unblocked and all FNAF Unblocked games. No download, no blocks, perfect for school!",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://fnafofficial.com/fnaf-unblocked.html",
+          "query-input": "required name=search_term_string"
+        },
+        "sameAs": ["https://fnafofficial.com/fnaf-unblocked.html"]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://fnafofficial.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "FNAF Unblocked",
+            "item": "https://fnafofficial.com/fnaf-unblocked.html"
+          }
+        ]
+      }
+    </script>
 
     <script
       async
@@ -925,10 +979,9 @@
                   <a
                     href="https://fnafofficial.com/fnaf-unblocked.html"
                     class="seo-redirect-link"
-                    title="Visit FNAF Official for FNAF Unblocked Games"
-                    rel="follow"
+                    title="FNAF 1 Unblocked - Play FNAF Unblocked Games"
                   >
-                    ➜ Visit Our Official Website
+                    ➜ Play FNAF 1 Unblocked & FNAF Unblocked Now
                   </a>
                 </div>
                 <!-- Main Title -->
@@ -984,9 +1037,21 @@
                         text-decoration: underline;
                         font-weight: bold;
                       "
-                      title="Play FNAF 1 Unblocked and FNAF Unblocked Games"
+                      title="FNAF 1 Unblocked - FNAF Unblocked Games"
                     >
-                      FNAF unblocked games collection
+                      FNAF 1 Unblocked
+                    </a>
+                    and
+                    <a
+                      href="https://fnafofficial.com/fnaf-unblocked.html"
+                      style="
+                        color: #ff9090;
+                        text-decoration: underline;
+                        font-weight: bold;
+                      "
+                      title="FNAF Unblocked Games"
+                    >
+                      FNAF Unblocked
                     </a>
                     on our official website!
                   </p>
@@ -1003,7 +1068,7 @@
                       💡 Looking for the official FNAF experience?
                     </strong>
                     <br />
-                    Visit our
+                    Visit our official website for
                     <a
                       href="https://fnafofficial.com/fnaf-unblocked.html"
                       style="
@@ -1011,12 +1076,23 @@
                         text-decoration: underline;
                         font-weight: bold;
                       "
-                      title="FNAF Official - Play FNAF 1 Unblocked and FNAF Unblocked Games"
+                      title="FNAF 1 Unblocked - FNAF Unblocked Games"
                     >
-                      official website
+                      FNAF 1 Unblocked
                     </a>
-                    to play all FNAF unblocked games including FNAF 1, 2, 3, 4
-                    and more!
+                    and
+                    <a
+                      href="https://fnafofficial.com/fnaf-unblocked.html"
+                      style="
+                        color: #ff9090;
+                        text-decoration: underline;
+                        font-weight: bold;
+                      "
+                      title="FNAF Unblocked Games"
+                    >
+                      FNAF Unblocked
+                    </a>
+                    games!
                   </p>
                 </div>
                 <!-- Game Trailer -->
@@ -1381,9 +1457,10 @@
                       href="https://fnafofficial.com/fnaf-unblocked.html"
                       class="footer-link"
                       style="font-weight: bold; color: #ff7070"
-                      title="FNAF Official - Play FNAF Unblocked Games"
+                      title="FNAF 1 Unblocked - FNAF Unblocked Games"
                     >
-                      🎮 Visit FNAF Official → fnafofficial.com
+                      🎮 Play FNAF 1 Unblocked & FNAF Unblocked →
+                      fnafofficial.com
                     </a>
                   </p>
                 </span>

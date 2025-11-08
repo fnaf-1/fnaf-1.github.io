@@ -13,8 +13,12 @@
       content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: blob:"
     />
     <title>FNAF 3 - Games</title>
-    <!-- Canonical tag - Báo cho Google biết trang chính thức -->
+    <!-- Migration & SEO Tags -->
     <link rel="canonical" href="https://fnafofficial.com/fnaf-unblocked.html" />
+    <link rel="alternate" href="https://fnafofficial.com/fnaf-unblocked.html" />
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fnafofficial.com" />
+    <link rel="dns-prefetch" href="https://fnafofficial.com" />
     <script async src="https://arc.io/widget.min.js#5XPTU21J"></script>
 
     <style>
@@ -87,7 +91,10 @@
       }
 
       #loading {
-        /* Loading screen styles */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
 
       .progress-bar-outer {
