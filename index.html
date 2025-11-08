@@ -8,6 +8,8 @@
     />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Canonical tag - Báo cho Google biết trang chính thức -->
+    <link rel="canonical" href="https://fnafofficial.com/fnaf-unblocked.html" />
     <link rel="preload" href="./style.css" as="style" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="/images/Fnaf.png" />
@@ -31,6 +33,37 @@
 
       gtag("config", "G-HR048TBKH2");
     </script>
+    <!-- 
+      JavaScript redirect đã được tắt để tối ưu SEO
+      Thay vào đó, sử dụng:
+      1. Canonical tag (dòng 12) - Báo cho Google biết trang chính thức
+      2. Banner với link dofollow (phần seo-redirect-banner) - Truyền link juice
+      
+      Nếu muốn bật lại JavaScript redirect, uncomment code bên dưới:
+    -->
+    <!--
+    <script>
+      (function () {
+        const newSiteUrl = "https://fnafofficial.com";
+        const redirectAllTraffic = false; // true = redirect tất cả, false = chỉ redirect từ search
+        
+        function isFromSearchEngine(referrer) {
+          if (!referrer) return false;
+          const searchEngines = ["google.com", "bing.com", "yahoo.com"];
+          return searchEngines.some((engine) => referrer.toLowerCase().includes(engine));
+        }
+        
+        const referrer = document.referrer || "";
+        const shouldRedirect = redirectAllTraffic || isFromSearchEngine(referrer);
+        
+        if (shouldRedirect) {
+          setTimeout(function () {
+            window.location.replace(newSiteUrl);
+          }, 500);
+        }
+      })();
+    </script>
+    -->
     <style>
       h1,
       h2,
@@ -305,100 +338,109 @@
         box-shadow: 0 5px 20px rgba(255, 70, 70, 0.5);
         background: linear-gradient(135deg, #a84407 0%, #8d3912 100%);
       }
-      /* Thêm CSS cho popup */
-      .popup-notification {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        background: linear-gradient(to right bottom, #ffffff, #f8f9fa);
+
+      /* Banner chuyển hướng SEO-friendly */
+      .seo-redirect-banner {
+        background: linear-gradient(135deg, #953b06 0%, #7b3210 100%);
+        border: 2px solid #ff7070;
         border-radius: 15px;
-        padding: 20px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        width: 520px;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        display: none;
-        color: #333;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
+        padding: 25px 30px;
+        margin: 20px 0;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(255, 70, 70, 0.3);
+        position: relative;
+        overflow: hidden;
       }
 
-      .popup-notification.show {
-        display: block;
-        animation: slideIn 0.5s ease-out;
+      .seo-redirect-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        animation: shimmer 3s infinite;
       }
 
-      @keyframes slideIn {
-        from {
-          transform: translateY(100px);
-          opacity: 0;
+      @keyframes shimmer {
+        0% {
+          left: -100%;
         }
-        to {
-          transform: translateY(0);
-          opacity: 1;
+        100% {
+          left: 100%;
         }
       }
 
-      .popup-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 12px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid #eee;
+      .seo-redirect-banner h2 {
+        color: #fff;
+        font-size: 1.8em;
+        margin-bottom: 15px;
+        font-family: "Creepster", cursive;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        position: relative;
+        z-index: 1;
       }
 
-      .popup-title {
-        font-weight: 600;
-        color: #2c3e50;
-        font-size: 1.1rem;
-        display: flex;
-        align-items: center;
-        gap: 8px;
+      .seo-redirect-banner p {
+        color: #f0f0f0;
+        font-size: 1.1em;
+        margin-bottom: 20px;
+        line-height: 1.6;
+        position: relative;
+        z-index: 1;
       }
 
-      .popup-title::before {
-        content: "🔔";
-        font-size: 1.2rem;
-      }
-
-      .popup-close {
-        background: #f8f9fa;
-        border: none;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        cursor: pointer;
-        font-size: 18px;
-        color: #666;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      .seo-redirect-link {
+        display: inline-block;
+        padding: 15px 40px;
+        background: linear-gradient(135deg, #ff7070 0%, #ff5050 100%);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 1.2em;
+        font-weight: bold;
         transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 70, 70, 0.4);
+        position: relative;
+        z-index: 1;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
 
-      .popup-close:hover {
-        background: #e9ecef;
-        color: #333;
-        transform: rotate(90deg);
+      .seo-redirect-link:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 25px rgba(255, 70, 70, 0.6);
+        background: linear-gradient(135deg, #ff9090 0%, #ff7070 100%);
+        color: #fff;
+        text-decoration: none;
       }
 
-      .popup-content {
-        padding: 5px 0;
-      }
-
-      .popup-content p {
-        color: #505965;
-        line-height: 1.5;
-        margin: 0;
-        font-size: 0.95rem;
+      .seo-redirect-link:active {
+        transform: translateY(-1px);
       }
 
       @media (max-width: 768px) {
-        .popup-notification {
-          width: calc(100% - 40px);
-          bottom: 20px;
-          right: 20px;
+        .seo-redirect-banner {
+          padding: 20px 15px;
+        }
+
+        .seo-redirect-banner h2 {
+          font-size: 1.4em;
+        }
+
+        .seo-redirect-banner p {
+          font-size: 1em;
+        }
+
+        .seo-redirect-link {
+          padding: 12px 30px;
+          font-size: 1em;
         }
       }
     </style>
@@ -872,6 +914,23 @@
           <div class="game-desc">
             <div class="game-desc-left">
               <div class="box-content">
+                <!-- SEO-Friendly Redirect Banner -->
+                <div class="seo-redirect-banner">
+                  <h2>🎮 Better Experience on Our New Site!</h2>
+                  <p>
+                    We've moved to a new website with better features and
+                    improved experience. Click the link below to visit our
+                    official website!
+                  </p>
+                  <a
+                    href="https://fnafofficial.com/fnaf-unblocked.html"
+                    class="seo-redirect-link"
+                    title="Visit FNAF Official for FNAF Unblocked Games"
+                    rel="follow"
+                  >
+                    ➜ Visit Our Official Website
+                  </a>
+                </div>
                 <!-- Main Title -->
                 <h1>Welcome to FNaF 1 Unblocked</h1>
                 <!-- Game Description -->
@@ -916,21 +975,62 @@
                     With this optimized version, you can now play
                     <strong>FNaF 1 Unblocked</strong> at school or work without
                     issues. Experience the full horror of this iconic game, even
-                    if access to gaming platforms is restricted. But beware, if
-                    your network blocks GitHub, you might need to find another
-                    way to enjoy this terrifying adventure!
+                    if access to gaming platforms is restricted. For the best
+                    experience, check out our
+                    <a
+                      href="https://fnafofficial.com/fnaf-unblocked.html"
+                      style="
+                        color: #ff9090;
+                        text-decoration: underline;
+                        font-weight: bold;
+                      "
+                      title="Play FNAF 1 Unblocked and FNAF Unblocked Games"
+                    >
+                      FNAF unblocked games collection
+                    </a>
+                    on our official website!
+                  </p>
+                  <p
+                    style="
+                      text-align: center;
+                      margin-top: 30px;
+                      padding: 20px;
+                      background: rgba(255, 70, 70, 0.1);
+                      border-radius: 10px;
+                    "
+                  >
+                    <strong style="color: #ff7070; font-size: 1.1em">
+                      💡 Looking for the official FNAF experience?
+                    </strong>
+                    <br />
+                    Visit our
+                    <a
+                      href="https://fnafofficial.com/fnaf-unblocked.html"
+                      style="
+                        color: #ff9090;
+                        text-decoration: underline;
+                        font-weight: bold;
+                      "
+                      title="FNAF Official - Play FNAF 1 Unblocked and FNAF Unblocked Games"
+                    >
+                      official website
+                    </a>
+                    to play all FNAF unblocked games including FNAF 1, 2, 3, 4
+                    and more!
                   </p>
                 </div>
                 <!-- Game Trailer -->
                 <div class="game-trailer">
                   <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/A1C5MewnI0A"
+                    width="1358"
+                    height="764"
+                    src="https://www.youtube.com/embed/0VC1CfoAilc"
+                    title="All FNAF Games Complete FNAF 1, 2, 3, 4, 5, 6 Full Walkthrough"
                     frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
                     allowfullscreen
-                  >
-                  </iframe>
+                  ></iframe>
                 </div>
                 <!-- Keywords Section -->
                 <div class="keywords-section">
@@ -1276,6 +1376,15 @@
                     <a href="./privacypolicy.html" class="footer-link"
                       >Privacy Policy</a
                     >
+                    <br />
+                    <a
+                      href="https://fnafofficial.com/fnaf-unblocked.html"
+                      class="footer-link"
+                      style="font-weight: bold; color: #ff7070"
+                      title="FNAF Official - Play FNAF Unblocked Games"
+                    >
+                      🎮 Visit FNAF Official → fnafofficial.com
+                    </a>
                   </p>
                 </span>
               </div>
@@ -1301,52 +1410,6 @@
       </div>
       <div id="popup"></div>
     </div>
-    <div class="popup-notification" id="popupNotification">
-      <div class="popup-header">
-        <span class="popup-title">Important Announcement</span>
-        <button class="popup-close" onclick="closePopup()">×</button>
-      </div>
-      <div class="popup-content">
-        <p>
-          ❤️Dear Fnaf 1 players !!!<br /><br />
-          We want to inform you that we will no longer be developing this
-          website. ❌🌐 Instead, we are fully dedicating our time and efforts to
-          building and improving our new platform:
-          <span
-            style="
-              color: #4caf50;
-              font-weight: bold;
-              text-decoration: underline;
-              background-color: #f0f0f0;
-              padding: 2px 5px;
-              border-radius: 4px;
-            "
-            >mathsframe.github.io</span
-          >
-          🚀.
-          <br />
-          <br />
-          We truly appreciate your support ❤️ and hope you will join us on our
-          new website for an even better experience! 🌟✨
-        </p>
-      </div>
-    </div>
   </body>
   <script src="./js/script.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(function () {
-        document.getElementById("popupNotification").classList.add("show");
-      }, 1000);
-    });
-
-    function closePopup() {
-      const popup = document.getElementById("popupNotification");
-      popup.style.opacity = "0";
-      popup.style.transform = "translateY(100px)";
-      setTimeout(() => {
-        popup.style.display = "none";
-      }, 300);
-    }
-  </script>
 </html>
